@@ -7,17 +7,17 @@ jobs:
     # environment: publish
     steps:
 
-      - name: Check that PYPI_TOKEN secret exists
+      - name: Check that PYPY_TOKEN secret exists
         env:
-            CURRENT_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN}}
-        if: ${{ env.CURRENT_PYPI_TOKEN == '' }}
-        run: echo "Secret PYPI_TOKEN is not defined." && exit 1
+            CURRENT_PYPY_TOKEN: ${{ secrets.PYPY_TOKEN}}
+        if: ${{ env.CURRENT_PYPY_TOKEN == '' }}
+        run: echo "Secret PYPY_TOKEN is not defined." && exit 1
 
       # - uses: actions/checkout@v4
       #- name: Build and publish to pypi
       #  uses: JRubics/poetry-publish@v1.17
       #  with:
-      #    pypi_token: ${{ secrets.PYPI_TOKEN }}
+      #    pypi_token: ${{ secrets.PYPY_TOKEN }}
       #    repository_name: "testpypi"
       #    repository_url: "https://test.pypi.org/legacy/"
       #    python_version: "3.10"
@@ -38,4 +38,4 @@ jobs:
         run: poetry build --verbose
 
       - name: Publish to TestPyPI
-        run: poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+        run: poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPY_TOKEN }}
