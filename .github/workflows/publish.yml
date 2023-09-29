@@ -26,4 +26,7 @@ jobs:
         run: poetry build --verbose
 
       - name: Publish to TestPyPI
-        run: poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+        env:
+          POETRY_PUBLISH_USERNAME: "__token__"
+          POETRY_PUBLISH_PASSWORD: ${{ secrets.PYPI_TOKEN}}
+        run: poetry publish --repository testpypi --username ${{ env.POETRY_PUBLISH_USERNAME }} --password ${{ env.POETRY_PUBLISH_PASSWORD }}
