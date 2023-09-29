@@ -38,4 +38,6 @@ jobs:
         run: poetry build --verbose
 
       - name: Publish to TestPyPI
+        with:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN}}
         run: poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPI_TOKEN }}
