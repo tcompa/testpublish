@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "testpublish"
+name = "HereIsMyVeryNiceProject"
 version = "0.1.0"
 description = "Test"
 authors = ["Tommaso Comparin <3862206+tcompa@users.noreply.github.com>"]
