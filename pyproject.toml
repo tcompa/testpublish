@@ -9,6 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 pydantic = "^2.4.2"
+bumpver = "^2023.1126"
 
 
 [build-system]
