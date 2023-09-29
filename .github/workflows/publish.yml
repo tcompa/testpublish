@@ -4,7 +4,7 @@ on: workflow_dispatch
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
-    environment: publish
+    # environment: publish
     steps:
 
       - name: Check that PYPI_TOKEN secret exists
