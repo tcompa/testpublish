@@ -29,3 +29,8 @@ jobs:
 
       - name: Build package
         run: poetry build --verbose
+
+      - name: Publish to TestPyPI
+        run: \
+          poetry source add testpypi https://test.pypi.org/legacy/ && \
+          poetry publish --repository testpypi --username __token__ --password ${{ secrets.PYPI_TOKEN }}
