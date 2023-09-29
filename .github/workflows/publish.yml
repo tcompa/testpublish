@@ -7,11 +7,11 @@ jobs:
     environment: publish
     steps:
 
-      - name: "check is PYPI_TOKEN exists"
+      - name: Check that PYPI_TOKEN secret exists
         env:
             CURRENT_PYPI_TOKEN: ${{ secrets.PYPI_TOKEN}}
         if: ${{ env.CURRENT_PYPI_TOKEN == '' }}
-        run: echo "Secret PYPI_TOKEN is not defined."
+        run: echo "Secret PYPI_TOKEN is not defined." && exit 1
 
       # - uses: actions/checkout@v4
       #- name: Build and publish to pypi
