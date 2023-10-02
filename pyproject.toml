@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "HereIsMyVeryNiceProject"
-version = "1.2.10"
+version = "1.2.11"
 description = "Test"
 authors = ["Tommaso Comparin <3862206+tcompa@users.noreply.github.com>"]
 license = "MIT"
@@ -22,7 +22,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.bumpver]
-current_version = "1.2.10"
+current_version = "1.2.11"
 version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
