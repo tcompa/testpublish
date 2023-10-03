@@ -5,6 +5,10 @@ description = "Test"
 authors = ["Tommaso Comparin <3862206+tcompa@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
+homepage = "https://example.org/home"
+repository = "https://example.org/repo"
+documentation = "https://example.org/docs"
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -33,3 +37,4 @@ push = true
 "pyproject.toml" = [
     'version = "{version}"$',
 ]
+
